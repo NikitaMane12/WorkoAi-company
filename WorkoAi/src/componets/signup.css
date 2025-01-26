@@ -1,65 +1,96 @@
-/* signup.css */
-
+/* General styling for the signup container */
 .signup-container {
-  width: 100%;
   max-width: 400px;
-  margin: 0 auto;
+  margin: 50px auto;
   padding: 20px;
-  background-color: #f4f7fc;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
 }
 
-h2 {
-  font-size: 24px;
+/* Center-align header text */
+.signup-container h2 {
+  font-size: 1.8rem;
   margin-bottom: 20px;
   color: #333;
 }
 
+/* Error message styling */
+.signup-container p {
+  margin: 10px 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Input group styling */
 .input-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .input-group label {
   display: block;
-  font-size: 14px;
-  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
   color: #555;
-  margin-bottom: 5px;
 }
 
 .input-group input {
   width: 100%;
   padding: 10px;
-  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box;
+  font-size: 1rem;
+  transition: all 0.3s;
 }
 
+/* Input focus effect */
 .input-group input:focus {
   border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
   outline: none;
 }
 
+/* Button styling */
 .btn-signup {
   width: 100%;
-  padding: 12px;
-  font-size: 16px;
+  padding: 10px;
   background-color: #007bff;
-  color: #fff;
+  color: white;
   border: none;
   border-radius: 4px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
+/* Button hover effect */
 .btn-signup:hover {
   background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
-p {
-  font-size: 14px;
-  color: red;
-  margin-bottom: 10px;
-  text-align: center;
+/* Button active effect */
+.btn-signup:active {
+  transform: translateY(0);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+  .signup-container {
+    padding: 15px;
+  }
+
+  .signup-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .input-group label {
+    font-size: 0.85rem;
+  }
+
+  .btn-signup {
+    font-size: 0.9rem;
+  }
 }
